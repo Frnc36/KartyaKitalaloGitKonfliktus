@@ -1,20 +1,26 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
+
 package app;
 
-/**
- *
- * @author MágoriFerencFerdinán
- */
 public class Program {
+    static String[] pakli = new String[22];
 
-    /**
-     * @param args the command line arguments
-     */
+ 
     public static void main(String[] args) {
-        // TODO code application logic here
+        int oszlop = 1;
+        kever(oszlop);
+    }
+
+    private static void kever(int oszlop) {
+        String[] regiPakli = pakli;
+        switch (oszlop) {
+            case 1:
+                for (int i = 1; i < 8; i++) {
+                    pakli[i] = regiPakli[19-(i-1)*3];
+                    pakli[i+7] = regiPakli[20-(i-1)*3];
+                    pakli[i+14] = regiPakli[21-(i-1)*3];
+                    
+                }   break;
+        }
     }
     
 }
